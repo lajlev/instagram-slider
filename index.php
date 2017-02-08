@@ -8,6 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <title>#<?php echo $tag; ?></title>
+  <meta content="Instant slideshow of instagram tag" "name="description">
 
   <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway:400,700,900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
