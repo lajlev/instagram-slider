@@ -17,7 +17,8 @@
         navigation: true,
         navigationPosition: 'right',
         paddingTop: '50px',
-        css3:false
+        css3: false,
+        continuousVertical: true
       });
       // Scroll to next section every 5 sec
       window.setInterval(function(){
