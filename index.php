@@ -1,44 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Instagram slider</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway:400,700,900" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.fullpage.js"></script>
-
-  <link rel="stylesheet" href="style.css">
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        navigation: true,
-        navigationPosition: 'right',
-        paddingTop: '50px',
-        css3: false,
-        continuousVertical: true
-      });
-      // Scroll to next section every 5 sec
-      window.setInterval(function(){
-        $.fn.fullpage.moveSectionDown();
-      }, 7000);
-
-      // reload page after 20 * 7 sec
-      window.setInterval(function(){
-        location.reload();
-      }, 140000);
-    });
-  </script>
-</head>
-<body>
-  <?php
+<?php
     require_once __DIR__ . '/vendor/autoload.php';
     $tag = $_GET['tag'];
     $media = Bolandish\Instagram::getMediaByHashtag($tag, 20);
   ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>#<?php echo $tag; ?></title>
 
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway:400,700,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.fullpage.js"></script>
+  <script type="text/javascript" src="custom.js"></script>
+
+  </script>
+</head>
+<body>
   <header>
     <h1 class="logo">
     #<?php echo $tag; ?></h1>
