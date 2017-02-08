@@ -34,13 +34,14 @@
 <body>
   <?php
     require_once __DIR__ . '/vendor/autoload.php';
-    $media = Bolandish\Instagram::getMediaByHashtag("$_GET['tag']", 20);
+    $tag = $_GET['tag'];
+    $media = Bolandish\Instagram::getMediaByHashtag($tag, 20);
   ?>
 
   <header>
     <h1 class="logo">
-    #<?php echo $_GET['tag']; ?></h1>
-    <h2 class="subheader">Del dit billede på Instagram #<?php echo $_GET['tag']; ?></h2>
+    #<?php echo $tag; ?></h1>
+    <h2 class="subheader">Del dit billede på Instagram</h2>
   </header>
 
   <div id="fullpage">
