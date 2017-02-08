@@ -1,0 +1,51 @@
+body {
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+  }
+
+  .logo {
+    font-family: 'Bungee', cursive;
+    font-size: 38px;
+    color: rgba(0, 0, 0, 0.7);
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 0;
+
+    position: fixed;
+    bottom: 280px;
+    left: -189px;
+    transform: rotate(-90deg);
+    z-index: 9;
+  }
+
+
+  .subheader {
+    font-size: 28px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 9;
+    width: 100%;
+    text-align: center;
+  }
+
+  .slide,
+  .section {
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/bg.jpg);
+    background-attachment: fixed;
+  }
+
+  img.instagram {
+    border: 12px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+    display: block;
+    position: relative;
+    z-index: 10;
+    max-width: 80vh;
+    max-height: 76%;
+    left: 50%;
+  }
