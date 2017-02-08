@@ -1,56 +1,53 @@
 body {
-    font-family: Raleway, sans-serif;
-    font-weight: 400;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
   }
 
-  header {
-    position: fixed;
-    bottom: 280px;
-    left: -200px;
-    transform: rotate(-90deg);
-    z-index: 9;
-    height: 50px;
-    width: 500px;
-    display: block;
-  }
+header {
+  position: fixed;
+  bottom: 280px;
+  left: -200px;
+  transform: rotate(-90deg);
+  z-index: 9;
+  height: 50px;
+  width: 500px;
+  display: block;
+}
 
-  .logo {
-    font-family: 'Bungee', cursive;
-    font-size: 36px;
-    color: rgba(0, 0, 0, 0.7);
-    letter-spacing: 4px;
-    margin-bottom: 3px;
+.logo {
+  font-family: 'Bungee', cursive;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 4px;
+  margin-bottom: 3px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.7);
+}
 
-    border-bottom: 4px solid rgba(0, 0, 0, 0.7);
-  }
+.subheader {
+  margin-top: 7px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.7);
 
+}
 
-  .subheader {
-    margin-top: 7px;
-    text-transform: uppercase;
-    font-size: 14px;
+.slide,
+.section {
+  background-size: cover;
+  background-position: center;
+  background-image: url(img/bg.jpg);
+  background-attachment: fixed;
+}
 
-    letter-spacing: 2px;
-    color: rgba(0, 0, 0, 0.7);
-
-  }
-
-  .slide,
-  .section {
-    background-size: cover;
-    background-position: center;
-    background-image: url(img/bg.jpg);
-    background-attachment: fixed;
-  }
-
-  img.instagram {
-    border: 12px solid #fff;
-    border-radius: 6px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
-    display: block;
-    position: relative;
-    z-index: 10;
-    max-width: 80vh;
-    max-height: 76%;
-    left: 50%;
-  }
+img.instagram {
+  border: 12px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+  display: block;
+  position: relative;
+  z-index: 10;
+  max-width: 80vh;
+  max-height: 76%;
+  left: 50%;
+}
