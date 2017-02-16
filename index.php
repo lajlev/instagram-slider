@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__ . '/vendor/autoload.php';
-    $tag = $_GET['tag'];
+    $tag = empty($_GET)? 'braetspilaarhus' : $_GET['tag']; // Defaults to braetspilaarhus if tag=something is not set
     $media = Bolandish\Instagram::getMediaByHashtag($tag, 20);
   ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <title>#<?php echo $tag; ?></title>
-  <meta content="Instant slideshow of instagram tag" "name="description">
+  <meta content="Instant slideshow of instagram tag" name="description">
 
   <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway:400,700,900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
@@ -37,13 +37,21 @@
   </header>
 
   <div id="fullpage">
-    <?php foreach($media as $value){ ?>
+    <?php
+    $slide_sponsor_img = "img/sponsors.jpg";
+    $slide_rand_num = rand(5, 15);
+    $slide_rand_num = 5;
+    $slide_num = 0;
+    foreach($media as $value){
+    $slide_num++;
+    ?>
     <div class="section">
       <div class="img-wrap">
         <img
-          data-src="<?php echo $value->display_src; ?>"
+          data-src="<?php echo ($slide_num == $slide_rand_num) ? $slide_sponsor_img : $value->display_src;?>"
           class="instagram"
           style="transform: rotate(<?php echo rand(-5, 5); ?>deg) translate(-50%, 0);"
+          title="<?php echo $slide_num; ?>"
         >
       </div>
     </div>
