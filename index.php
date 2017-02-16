@@ -41,7 +41,7 @@
     <div class="section">
       <div class="img-wrap">
         <img
-          data-src="<?php echo $value->display_src; ?>'"
+          data-src="<?php echo $value->display_src; ?>"
           class="instagram"
           style="transform: rotate(<?php echo rand(-5, 5); ?>deg) translate(-50%, 0);"
         >
